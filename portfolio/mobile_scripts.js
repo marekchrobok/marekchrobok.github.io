@@ -19,9 +19,9 @@
       $(document).ready(function(){                    
       $(window).scroll(function(){                          
           if ($(this).scrollTop() > 100) {
-              $(".HamburgerToggle").css({ top: '6%' });
+              $(".HamburgerToggle").css({ top: '5%' });
           } else {
-              $(".HamburgerToggle").css({ top: '20%' });
+              $(".HamburgerToggle").css({ top: '19%' });
           }
           });
       });

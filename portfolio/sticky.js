@@ -63,6 +63,6 @@ var stickyHeaders = (function() {
     };
   })();
   
-  $(function() {
-    stickyHeaders.load($(".Sticky"));
+    $(function() {
+        stickyHeaders.load($(".Sticky"));
 });
