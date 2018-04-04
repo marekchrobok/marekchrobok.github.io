@@ -1,0 +1,172 @@
+<html >
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="portfolio/styleportfolio.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Załaduj ponizsze skrypty, jeśli szerokość przeglądarki wynosi 415px lub mniej -->
+    <script>
+
+        // setInterval(function() {}, 5000);    ----  zapętla się cały kod, niepoządanie  działanie
+
+         if (window.innerWidth < 415) {
+            var head = document.getElementsByTagName('head')[0];
+        
+            var s1 = document.createElement("script");
+            s1.type = "text/javascript";
+            s1.src = "portfolio/mobile_scripts.js";
+            head.appendChild(s1);
+         }
+    </script>
+
+</head>
+<body>
+
+    <div class='Navbar'>
+        <object type="image/svg+xml"  data="portfolio/logo.svg">
+            Your browser does not support SVG
+        </object>
+        <img src="portfolio/mouse.png">
+    </div>
+
+    <div class='Hamburger'><img id='Ham1' src='portfolio/hamburger.png'></div>
+    <div class='HamburgerScroll'><img id='Ham2' src='portfolio/hamburger.png'></div>
+
+    <div class='HamburgerToggle'>
+        <ul>
+            <li><a href="index.html"><span>HOME</span></a></li>
+            <li><a href="#motion">MOTION</a></li>
+            <li><a href="#3d">3D</a></li>
+            <li><a href="#ui">UI/UX</a></li>
+            <li><a href="#dtp">DTP</a></li>
+        </ul>
+    </div>
+
+    <div class='TopMargin'></div>
+    <div class='Sticky'>MOTION</div>
+
+    <div id='motion' class='Project'>
+        <div class='Slidediv'>
+            <div class='Slidemargin'></div>
+            <video src="portfolio/typonimation/noisia.mp4" autoplay controls muted></video>
+            <img src="portfolio/typonimation/maya1.png">
+            <img src="portfolio/typonimation/after1.png">
+        </div>
+            <p><span>NOISIA</span> OUTER EDGES - TYPONIMATION</p>
+    </div>
+
+    <div class='Project'>
+            <div class='Slidediv'>
+                <div class='Slidemargin'></div>
+                <video src="portfolio/motion_design/motion1.mp4" autoplay controls loop></video>
+                <video src="portfolio/motion_design/motion2.mp4" autoplay controls loop></video>
+                <video src="portfolio/motion_design/motion3.mp4" autoplay controls loop></video>
+                <video src="portfolio/motion_design/motion4.mp4" autoplay controls loop></video>
+                <img src="portfolio/motion_design/after2.png">
+            </div>
+                <p><span>MOTION DESIGN</span> - 5 SEC ANIMATIONS</p>
+    </div>
+
+    <div class='Project'>
+            <div class='Slidediv'>
+                <div class='Slidemargin'></div>
+                <video src="portfolio/cat_animation/cat.mp4" controls muted></video>
+                <img src="portfolio/cat_animation/blender1.png">
+                <img src="portfolio/cat_animation/after3.png">
+            </div>
+                <p><span>CAT</span> IN HOUSE - ANIMATION</p>
+        </div>
+
+    <div class='Sticky'>3D</div>
+
+            <div id='3d' class='Project'>
+                <div class='Slidediv'>
+                    <div class='Slidemargin'></div>      
+                    <video class='slot1' src="portfolio/spaceship/spaceship.mp4" controls loop></video>
+                    <img src="portfolio/spaceship/blender2.png">
+                </div>
+                    <p><span>SPACESHIP</span> - 3D MODEL</p>
+             </div>
+
+            <div class='Project'>
+                <div class='Slidediv'>
+                    <div class='Slidemargin'></div>            
+                    <img src="portfolio/cuphead/cuphead1.png">
+                    <img src="portfolio/cuphead/cuphead2.png">
+                </div>
+                     <p><span>CUPHEAD</span> - 3D MODEL</p>
+            </div>
+
+            <!-- <div class='Sticky'>UI/UX</div>
+
+            Kompresja wideo robi rip stronie, proszę to poprawić.
+
+            <div id='ui' class='Project'>
+                <div class='Slidediv'>              
+                    <video src="portfolio/noisia_app/ui1.mp4" controls loop></video>
+                    <video src="portfolio/noisia_app/ui2.mp4" controls loop></video>
+                    <video src="portfolio/noisia_app/ui3.mp4" controls loop></video>
+                    <video src="portfolio/noisia_app/ui4.mp4" controls loop></video>
+                    <video src="portfolio/noisia_app/ui5.mp4" controls loop></video>
+                    <video src="portfolio/noisia_app/ui6.mp4" controls loop></video>
+                    <img src="portfolio/noisia_app/illustrator1.png">
+                    <img src="portfolio/noisia_app/after4.png">
+                </div>
+                    <p><span>NOISIA</span> OUTER EDGES - TOUR APP CONCEPT</p>
+            </div> -->
+
+
+
+
+    <!-- SKRYPTY -->
+
+    <!-- Skrypt odpowiedzialny za kontrolowanie pozycji top divu HamburgerToggle -->
+    <script>
+        (function($) {          
+            $(document).ready(function(){                    
+            $(window).scroll(function(){                          
+                if ($(this).scrollTop() > 100) {
+                    $(".HamburgerToggle").css({ top: '6%' });
+                } else {
+                    $(".HamburgerToggle").css({ top: '20%' });
+                }
+                });
+            });
+        })(jQuery);
+    </script>
+
+
+
+    <!-- Smooth scrolling między anchorami -->
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+     </script>
+
+  
+    
+</body>
+</html>

@@ -1,0 +1,287 @@
+html,body {
+    margin:0;
+
+    height: 100%;
+    width: 100%;
+}
+
+.TopMargin{
+    position: relative;
+    height: 5%;
+}
+
+.Navbar{
+    position: relative;
+    height: 14%;
+}
+
+.Navbar Object{
+    position: absolute;
+    width: 20%;
+    margin: 5.5%;
+}
+
+.Navbar img{
+    position: absolute;
+    opacity: 0.6;
+    width: 40%;
+    transform: translateX(-50%);
+    left:50%;
+    bottom: 15%;
+    z-index: 99;
+
+    animation:Mouse 2s infinite;
+    -webkit-animation:Mouse 2s infinite; /* dla Google Chrome, Safari, Opera 15+ */
+}
+
+.Navbar img:hover{
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+.Hamburger {
+    position:absolute;
+    right: 4%;
+    top: 2%;
+    opacity: .6;
+    width: 14%;
+    height: 8%;
+    z-index: 99;
+}
+
+.Hamburger img{
+    width: 100%;
+}
+
+/* Hamburger pojawiający się na dole przeglądarki */
+.HamburgerScroll{
+    position:fixed;
+    /* right: 4%;
+    top: 8%; */
+    transform: translateX(-50%);
+    bottom: 4%;
+    left: 50%;
+    opacity: .8;
+    width: 14%;
+    height: 8%;
+    z-index: 99;
+    display: none;
+}
+.HamburgerScroll img{
+    width: 100%;
+}
+
+.HamburgerToggle{
+    position: fixed;
+    top:20%;
+    height:100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 90;
+    display:none;
+  }
+
+/* Lista wyliczeniowa jako zawartość hamburgera HamburgerToggle */
+ul {
+    padding-left: 0;
+    padding-top: 20%;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    position: fixed;
+    z-index: 99;
+    justify-content: center;
+    display: grid;
+}
+
+ul li{
+    margin-bottom: 10%;
+}
+  
+ul li a {
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    color:#69C2AF;
+    opacity: .7;
+}
+
+ul li a span {
+    color:#ffffff;
+}
+
+/* followWrap jest odpowiedzialny za działanie skryptu sticky.js - nie istnieje w html, zostaje dodany poprzez skrypt  */
+.followWrap{
+    background-color: #69C2AF;
+    margin-bottom: 2%;
+}
+
+.Sticky{
+    position: relative;
+    height: 4%;
+    padding-top: 3%;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    background-color: #69C2AF;
+    background-size: auto;
+    color:#ffffff;
+    letter-spacing: 3px;
+}
+
+.Sticky.fixed{
+    position:fixed;
+    opacity: .9;
+    width: 100%;
+    top:0;
+    z-index: 99;
+}
+.Sticky.relative{
+    width: 100%;
+    position: relative;
+}
+
+/* Główny div mieszczący slider oraz podpis */
+.Project{
+    position: relative;
+    height: 40%;
+    background-color: #ffffff; /* Placeholder tła, do usunięcia */
+    overflow: hidden;
+}
+
+/* Div odpowiadający za poruszanie obiektów w osi X */
+.Project .Slidediv{
+    position: absolute;
+    height: 78%;
+    width: 100%;
+    overflow-x:auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.Project .Slidemargin{
+    position: relative;
+    float: left;
+    width:13%;
+    height: 100%;
+
+}
+
+.Project video{
+    position: relative;
+    height: 100%;
+    margin-right: .5%; /* Rózny margines dla róznych obiektów, do poprawy*/
+}
+
+.Project img{
+    position: relative;
+    height: 100%;
+}
+
+/* Podpis pod projektem */
+.Project p{
+    position: relative;
+    top: 87%;
+    color: #666666;
+    font-family: Helvetica, sans-serif;
+    font-size: .9em;
+}
+
+/* Pogrubiona część podpisu */
+.Project p span{
+    font-weight: bold;
+    color:#222222;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 414px){
+
+    .TopMargin{
+        display:none;
+    }
+
+    .Navbar{
+        background-color: white;
+    }
+
+    .Navbar img{
+        display:none;
+    }
+
+    .Project .Slidemargin{
+        display:none;
+    }
+
+    .Project p{
+        text-align: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 415px){
+
+    .Navbar{
+        position:fixed;
+        height: 100%;
+        width: 13%;
+        z-index: 99;
+    }
+
+    .Navbar::after{
+        content: '';
+        background-color: #ffffff;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity:0.9;
+    }
+
+    .Navbar object{
+        width: 65%;
+        margin: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        top:5%;
+        z-index: 999;
+    }
+
+    .Hamburger{
+        display: none;
+    }
+
+    .Project{
+        height: 75%;
+    }
+
+    .Project .Slidediv{
+        height: 90%;
+    }
+
+    .Project video{
+        margin:auto;
+    }
+
+    .Project p{
+        top: 90%;
+        left: 13%;
+    }
+
+    .Sticky{
+        left:13%;
+        border-radius: 0 20px 0 0;
+        padding: 1% 0 0 0;
+        width: 10%;
+        font-weight: lighter;
+    }
+
+}
+
+/* ANIMACJE */
+
+@keyframes Mouse{
+    0% {bottom: 15%}
+    50% {bottom:13%}
+    100% {bottom:15%}
+}
