@@ -8,17 +8,18 @@
     <!-- Załaduj ponizsze skrypty, jeśli szerokość przeglądarki wynosi 415px lub mniej -->
     <script>
 
-        // setInterval(function() {}, 5000);    ----  zapętla się cały kod, niepoządanie  działanie
-
-         if (window.innerWidth < 415) {
-            var head = document.getElementsByTagName('head')[0];
-        
-            var s1 = document.createElement("script");
-            s1.type = "text/javascript";
-            s1.src = "portfolio/mobile_scripts.js";
-            head.appendChild(s1);
-         }
-    </script>
+        //   if (window.innerWidth < 415) {
+        //setInterval(function() {
+           var head = document.getElementsByTagName('head')[0];
+       
+           var s1 = document.createElement("script");
+           s1.type = "text/javascript";
+           s1.src = "portfolio/sticky.js";
+           head.appendChild(s1);
+        //}, 5000);
+        // }
+         
+   </script>
 
 </head>
 <body>
@@ -98,6 +99,7 @@
                      <p><span>CUPHEAD</span> - 3D MODEL</p>
             </div>
 
+
             <!-- <div class='Sticky'>UI/UX</div>
 
             Kompresja wideo robi rip stronie, proszę to poprawić.
@@ -121,22 +123,7 @@
 
     <!-- SKRYPTY -->
 
-    <!-- Skrypt odpowiedzialny za kontrolowanie pozycji top divu HamburgerToggle -->
-    <script>
-        (function($) {          
-            $(document).ready(function(){                    
-            $(window).scroll(function(){                          
-                if ($(this).scrollTop() > 100) {
-                    $(".HamburgerToggle").css({ top: '6%' });
-                } else {
-                    $(".HamburgerToggle").css({ top: '20%' });
-                }
-                });
-            });
-        })(jQuery);
-    </script>
-
-
+    <script type="text/javascript" src="portfolio/mobile_scripts.js"></script>
 
     <!-- Smooth scrolling między anchorami -->
     <script>
@@ -165,7 +152,6 @@
           });
         });
      </script>
-
   
     
 </body>
