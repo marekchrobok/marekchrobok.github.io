@@ -117,6 +117,7 @@ ul li a span {
 .followWrap{
     background-color: #69C2AF;
     margin-bottom: 2%;
+    padding: 1% 0 1% 0;
 }
 
 .Sticky{
@@ -127,7 +128,7 @@ ul li a span {
     background-size: auto;
     color:#ffffff;
     letter-spacing: 3px;
-    padding: 2% 0 2% 0;
+
 }
 
 .Sticky.fixed{
@@ -136,6 +137,7 @@ ul li a span {
     width: 100%;
     top:0;
     z-index: 99;
+    padding: 1% 0 1% 0;
 }
 .Sticky.relative{
     width: 100%;
@@ -180,7 +182,7 @@ ul li a span {
     height: 100%;
 }
 
-/* Podpis pod projektem */
+/* Project title */
 .Project p{
     position: relative;
     top: 87%;
@@ -189,7 +191,7 @@ ul li a span {
     font-size: .9em;
 }
 
-/* Pogrubiona część podpisu */
+/* Additional formatting options */
 .Project p span{
     font-weight: bold;
     color:#222222;
@@ -238,9 +240,6 @@ ul li a span {
         margin: 0 auto;
     }
 
-    .Sticky{
-        padding: 1% 0 1% 0;
-    }
 
     ul{
         padding-top: 25%;
@@ -291,7 +290,7 @@ ul li a span {
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 640px){
 
     .Navbar Object{
         width: 12%;
@@ -305,6 +304,8 @@ ul li a span {
         width: 7%;
     }
 }
+
+@media (min-width: 768px){}
 
 @media (min-width: 768px) and (orientation: portrait){}
 
@@ -368,9 +369,9 @@ ul li a span {
         height: 90%;
     }
 
-
     .Project p{
-        top: 90%;
+        text-align: left;
+        top: 93%;
         left: 13%;
     }
 
@@ -379,14 +380,12 @@ ul li a span {
         width: 87%;
         left:13%;
         margin:0;
-        padding: 1% 0 0 0;
         border-radius: 20px 0 0 0;
     }
 
     .Sticky.fixed{
         width:87%;
         left:13%;
-        padding: 1% 0 1% 0;
         border-radius: 0 0 0 20px;
     }
 
