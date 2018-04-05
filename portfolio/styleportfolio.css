@@ -290,7 +290,7 @@ ul li a span {
     }
 }
 
-@media (min-width: 640px){
+@media (min-width: 560px){
 
     .Navbar Object{
         width: 12%;
