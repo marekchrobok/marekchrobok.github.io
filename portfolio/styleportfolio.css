@@ -8,6 +8,7 @@ html,body {
 .TopMargin{
     position: relative;
     height: 5%;
+    display: none;
 }
 
 .Navbar{
@@ -29,6 +30,7 @@ html,body {
     left:50%;
     bottom: 15%;
     z-index: 99;
+    display: none;
 
     animation:Mouse 2s infinite;
     -webkit-animation:Mouse 2s infinite; /* dla Google Chrome, Safari, Opera 15+ */
@@ -115,18 +117,17 @@ ul li a span {
 .followWrap{
     background-color: #69C2AF;
     margin-bottom: 2%;
-    padding: 2% 0 0 0;
 }
 
 .Sticky{
     position: relative;
-    height: 4%;
     text-align: center;
     font-family: Helvetica, sans-serif;
     background-color: #69C2AF;
     background-size: auto;
     color:#ffffff;
     letter-spacing: 3px;
+    padding: 2% 0 2% 0;
 }
 
 .Sticky.fixed{
@@ -135,7 +136,6 @@ ul li a span {
     width: 100%;
     top:0;
     z-index: 99;
-    padding: 2% 0 0 0;
 }
 .Sticky.relative{
     width: 100%;
@@ -165,13 +165,14 @@ ul li a span {
     float: left;
     width:13%;
     height: 100%;
+    display: none;
 
 }
 
 .Project video{
     position: relative;
     height: 100%;
-    margin-right: .5%; /* Rózny margines dla róznych obiektów, do poprawy*/
+    margin: auto; /* Wymuszam auto, bo bez tego robi się dziwna przerwa */
 }
 
 .Project img{
@@ -196,33 +197,122 @@ ul li a span {
 
 /* MEDIA QUERIES */
 
+@media (orientation: portrait){
 
-@media (max-width: 414px){
-
-    .TopMargin{
-        display:none;
+    .Project p{
+        text-align: center;
+        margin: 0 auto;
     }
+
+}
+
+@media (orientation: landscape){
 
     .Navbar{
-        background-color: white;
+        height: 20%;
     }
 
-    .Navbar img{
-        display:none;
+    .Navbar Object{
+        margin: 1.7%;
+        width: 14%;
     }
 
-    .Project .Slidemargin{
-        display:none;
+    .Hamburger{
+        width: 8%;
+        right: 1.7%;
+        top: 3%;
+    }
+
+    .HamburgerScroll{
+        width: 8%;
+        bottom: 8.5%;
+        left: 5.5%;
+    }
+
+    .Project{
+        height: 69%;
     }
 
     .Project p{
         text-align: center;
         margin: 0 auto;
-        text-align: center;
+    }
+
+    .Sticky{
+        padding: 1% 0 1% 0;
+    }
+
+    ul{
+        padding-top: 25%;
+        display: flex;
+    }
+
+    ul li{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    ul li a{
+        font-size: 1.7em;
+    }
+
+}
+
+@media (max-width: 300px){
+
+    .Project p{
+        font-size: .7em;
+    }
+
+}
+@media (min-width: 301px) and (orientation: portrait){
+
+    .Project{
+        height: 33%;
     }
 }
 
-@media (min-width: 415px){
+@media (min-width: 400px) and (orientation: portrait){
+    
+    .Project {
+        height: 35%;
+    }
+
+    .Navbar Object{
+        width: 25%;
+    }
+
+    .Hamburger{
+        width: 16%;
+    }
+
+    .HamburgerScroll{
+        width: 16%;
+    }
+}
+
+@media (min-width: 768px){
+
+    .Navbar Object{
+        width: 12%;
+    }
+
+    .Hamburger{
+        width: 7%;
+    }
+
+    .HamburgerScroll{
+        width: 7%;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait){}
+
+@media (min-width: 1200px){
+
+    .TopMargin{
+        display: block;
+    }
 
     .Navbar{
         position:fixed;
@@ -249,17 +339,25 @@ ul li a span {
         z-index: 999;
     }
 
+    .Navbar img{
+        display: block;
+    }
+
     .Hamburger{
         display: none;
     }
 
-    /* Usunięcie przesuwanego hamburgera oraz menu kontekstowego w wersji desktopowej */
+    /* Usunięcie poprzez przesunięcie przesuwanego hamburgera oraz menu kontekstowego w wersji desktopowej */
     .HamburgerScroll{
         left:500%; 
     }
 
     .HamburgerToggle{
         left:500%;
+    }
+
+    .Project .Slidemargin{
+        display: block;
     }
 
     .Project{
@@ -270,9 +368,6 @@ ul li a span {
         height: 90%;
     }
 
-    .Project video{
-        margin:auto;
-    }
 
     .Project p{
         top: 90%;
@@ -291,7 +386,7 @@ ul li a span {
     .Sticky.fixed{
         width:87%;
         left:13%;
-        padding: 1% 0 0 0;
+        padding: 1% 0 1% 0;
         border-radius: 0 0 0 20px;
     }
 
