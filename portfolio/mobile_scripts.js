@@ -6,13 +6,27 @@
       $(document).ready(function(){                    
       $(window).scroll(function(){                          
           if ($(this).scrollTop() > 100) {
-              $('.HamburgerScroll').fadeIn(500);
+             $('.Hamburger').css({ top: '85%'});
+             $('.Hamburger').css({ position: 'fixed'});
           } else {
-              $('.HamburgerScroll').fadeOut(250);
+              $('.Hamburger').css({ top: '3%' });
           }
           });
       });
     })(jQuery);
+
+
+    //  (function($) {          
+    //     $(document).ready(function(){                    
+    //     $(window).scroll(function(){                          
+    //         if ($(this).scrollTop() > 100) {
+    //             $('.HamburgerScroll').fadeIn(500);
+    //         } else {
+    //             $('.HamburgerScroll').fadeOut(250);
+    //         }
+    //         });
+    //     });
+    //   })(jQuery);
 
     //Skrypt odpowiedzialny za kontrolowanie pozycji top divu HamburgerToggle
     (function($) {          
