@@ -15,19 +15,6 @@
       });
     })(jQuery);
 
-
-    //  (function($) {          
-    //     $(document).ready(function(){                    
-    //     $(window).scroll(function(){                          
-    //         if ($(this).scrollTop() > 100) {
-    //             $('.HamburgerScroll').fadeIn(500);
-    //         } else {
-    //             $('.HamburgerScroll').fadeOut(250);
-    //         }
-    //         });
-    //     });
-    //   })(jQuery);
-
     //Skrypt odpowiedzialny za kontrolowanie pozycji top divu HamburgerToggle
     (function($) {          
       $(document).ready(function(){                    
@@ -55,11 +42,9 @@
   
             if(image_tracker=='h'){
               document.getElementById('Ham1').src = 'portfolio/close.png';
-              document.getElementById('Ham2').src = 'portfolio/close.png';
               image_tracker = 'c'
             }else{
               document.getElementById('Ham1').src = 'portfolio/hamburger.png';
-              document.getElementById('Ham2').src = 'portfolio/hamburger.png';
               image_tracker = 'h'
             }
         })

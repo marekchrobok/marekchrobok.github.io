@@ -46,22 +46,6 @@ html,body {
     width: 100%;
 }
 
-/* Hamburger pojawiający się na dole przeglądarki */
-.HamburgerScroll{
-    position:fixed;
-    transform: translateX(-50%);
-    bottom: 4%;
-    left: 50%;
-    opacity: .8;
-    width: 14%;
-    height: 8%;
-    z-index: 99;
-    display: none;
-}
-.HamburgerScroll img{
-    width: 100%;
-}
-
 .HamburgerToggle{
     position: fixed;
     top:19%;
@@ -214,12 +198,6 @@ ul li a span {
         top: 3%;
     }
 
-    .HamburgerScroll{
-        width: 8%;
-        bottom: 8.5%;
-        left: 5.5%;
-    }
-
     .Project{
         height: 69%;
     }
@@ -285,10 +263,6 @@ ul li a span {
     .Hamburger{
         width: 16%;
     }
-
-    .HamburgerScroll{
-        width: 16%;
-    }
 }
 
 @media (min-width: 560px){
@@ -298,10 +272,6 @@ ul li a span {
     }
 
     .Hamburger{
-        width: 7%;
-    }
-
-    .HamburgerScroll{
         width: 7%;
     }
 }
@@ -320,10 +290,6 @@ ul li a span {
         margin: 1%;
     }
 
-    .HamburgerScroll{
-        width: 10%;
-        bottom: 2%;
-    }
 }
 
 @media (min-width: 1024px) and (orientation: landscape){
@@ -334,10 +300,6 @@ ul li a span {
 
     .Hamburger{
         margin-top: -.5%;
-    }
-
-    .HamburgerScroll{
-        margin-bottom: -4%;
     }
 }
 
@@ -389,11 +351,6 @@ ul li a span {
 
     .Hamburger{
         display: none;
-    }
-
-    /* Usunięcie poprzez przesunięcie przesuwanego hamburgera oraz menu kontekstowego w wersji desktopowej */
-    .HamburgerScroll{
-        left:500%; 
     }
 
     .HamburgerToggle{
