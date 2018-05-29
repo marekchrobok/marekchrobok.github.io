@@ -38,12 +38,47 @@
     z-index: 9999;
     display: none;
   }
+
+  .about p{
+    font-size: .8em;
+    margin: 0 15% 0 15%;
+    font-family: Helvetica, Verdana, sans-serif;
+    color: #ffffff;
+    font-weight: lighter;
+    opacity: .5;
+  }
+
+  .about #imienazwisko{
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin-top: 65%;
+    margin-bottom: 8%;
+    opacity: 1;
+
+  }
   .close{
     width:3%;
     position: absolute;
     right:0;
     opacity:0.7;
     margin:1%;
+  }
+
+  .avatar{
+    position: absolute;
+    width: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 8%;
+  }
+
+  .instagram{
+    position: absolute;
+    width: 12%;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 8%;
+
   }
 
   .logo{
@@ -82,7 +117,7 @@
 
   .link {
     position: relative;
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, Verdana, sans-serif;
     font-size: .8em;
     display: inline-block;
     letter-spacing: 3px;
@@ -107,6 +142,10 @@
       left:3%;
       height:90%;
       width: 94%;
+    }
+
+    .about #imienazwisko{
+      text-align: center;
     }
 
     .close{
@@ -168,6 +207,34 @@
 
     .mobile{
       display:none;
+    }
+
+    .avatar{
+      width: 20%;
+      left: 15%;
+    }
+
+    .instagram{
+      width: 4%;
+      left:15%;
+      bottom: 14%;
+    }
+
+    .about{
+      top: 20%;
+      height: 60%;
+    }
+
+    .about p{
+      margin: 0 20% 0 30%;
+      font-size: 1em;
+    }
+
+    .about #imienazwisko{
+      margin-top: 6%;
+      margin-bottom: 5%;
+      font-size: 1.5em;
+      letter-spacing: 4px;
     }
     
     .dark p{
